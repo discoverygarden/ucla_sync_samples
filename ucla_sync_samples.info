@@ -1,0 +1,4 @@
+name = UCLA Sync Samples
+description = Ingest sample objects.
+core = 7.x
+dependencies[] = islandora
