@@ -28,7 +28,7 @@ function ucla_sync_ingest() {
     $jpeg_url = "http://digital.library.ucla.edu/islandora/object/edu.ucla.library.specialCollections.losAngelesDailyNews:$i/datastream/JPG/view";
     $jpeg = file_get_contents($jpeg_url);
 
-    $object = islandora_prepare_new_object('moo', $title, array(), array('islandora:sp_basic_image'), array(array('relationship' => 'isMemberOfCollection', 'pid' => 'islandora:sp_basic_image_collection')));
+    $object = islandora_prepare_new_object('ucla', $title, array(), array('islandora:sp_basic_image'), array(array('relationship' => 'isMemberOfCollection', 'pid' => 'ucla:testSync')));
 
     $mods_ds = $object->constructDatastream('MODS', 'M');
     $mods_ds->label = 'MODS Record';
